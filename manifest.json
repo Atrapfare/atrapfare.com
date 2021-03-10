@@ -1,0 +1,22 @@
+{
+    "name": "Dominik Knaup",
+    "short_name": "Dominik Knaup",
+    "start_url": "/index.php",
+    "display": "standalone",
+    "background_color": "black",
+    "theme_color": "black",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/admin/favicon/favicon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/admin/favicon/sfavicon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        }
+    ]
+
+}
