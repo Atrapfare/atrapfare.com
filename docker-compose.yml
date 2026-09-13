@@ -1,0 +1,33 @@
+services:
+  web:
+    image: nginx:alpine
+    restart: unless-stopped
+    volumes:
+      - /var/www/atrapfare:/usr/share/nginx/html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    labels:
+      - "traefik.enable=true"
+      # Hauptdomain
+      - "traefik.http.routers.atrapfare.rule=Host(`atrapfare.com`)"
+      - "traefik.http.routers.atrapfare.entrypoints=websecure"
+      - "traefik.http.routers.atrapfare.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.atrapfare.middlewares=atrapfare-headers"
+      # Security Headers
+      - "traefik.http.middlewares.atrapfare-headers.headers.frameDeny=true"
+      - "traefik.http.middlewares.atrapfare-headers.headers.contentTypeNosniff=true"
+      - "traefik.http.middlewares.atrapfare-headers.headers.referrerPolicy=strict-origin-when-cross-origin"
+      - "traefik.http.middlewares.atrapfare-headers.headers.browserXssFilter=true"
+      # Redirect www.atrapfare.com, atrapfare.de/.net + www auf atrapfare.com
+      - "traefik.http.routers.atrapfare-redirect.rule=Host(`www.atrapfare.com`) || Host(`atrapfare.de`) || Host(`www.atrapfare.de`) || Host(`atrapfare.net`) || Host(`www.atrapfare.net`)"
+      - "traefik.http.routers.atrapfare-redirect.entrypoints=websecure"
+      - "traefik.http.routers.atrapfare-redirect.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.atrapfare-redirect.middlewares=atrapfare-redirect-mw"
+      - "traefik.http.middlewares.atrapfare-redirect-mw.redirectregex.regex=^https?://(?:www\\.atrapfare\\.com|atrapfare\\.de|www\\.atrapfare\\.de|atrapfare\\.net|www\\.atrapfare\\.net)(.*)"
+      - "traefik.http.middlewares.atrapfare-redirect-mw.redirectregex.replacement=https://atrapfare.com$${1}"
+      - "traefik.http.middlewares.atrapfare-redirect-mw.redirectregex.permanent=true"
+    networks:
+      - traefik
+
+networks:
+  traefik:
+    external: true
