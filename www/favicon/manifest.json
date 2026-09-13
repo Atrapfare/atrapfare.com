@@ -1,0 +1,10 @@
+{
+  "name": "Dominik Knaup",
+  "short_name": "DK",
+  "icons": [
+    { "src": "/favicon/android-icon-192x192.png", "sizes": "192x192", "type": "image/png" }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
