@@ -1,3 +1,13 @@
+# Fixed project name: keeps the container name atrapfare-web-1 that
+# ~/traefik/config/dynamic.yml routes to, independent of the checkout's dirname.
+name: atrapfare
+
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 services:
   web:
     image: nginx:alpine
@@ -27,6 +37,8 @@ services:
       - "traefik.http.middlewares.atrapfare-redirect-mw.redirectregex.permanent=true"
     networks:
       - traefik
+    mem_limit: 64m
+    logging: *logging
 
 networks:
   traefik:
