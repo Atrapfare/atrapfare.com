@@ -1,8 +1,6 @@
-/* Runs synchronously in <head> so the language is right on the first frame (no English flash for German visitors). */
+/* Runs synchronously in <head> so the language is right on the first frame. Default is English; only an explicit DE/EN choice is remembered. */
 (function () {
-  var root = document.documentElement;
   var lang = null;
   try { lang = localStorage.getItem('lang'); } catch (e) {}
-  if (lang !== 'de' && lang !== 'en') lang = (navigator.language || '').toLowerCase().indexOf('de') === 0 ? 'de' : 'en';
-  root.lang = lang;
+  document.documentElement.lang = lang === 'de' ? 'de' : 'en';
 })();
