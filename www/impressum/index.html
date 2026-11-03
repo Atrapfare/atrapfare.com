@@ -11,39 +11,27 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
-  <meta name="theme-color" content="#cfe9da" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#06241a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131312" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/theme.js"></script>
 </head>
 <body>
 
-<header class="menubar">
-  <div class="menubar-left">
-    <a href="/" class="brand"><span class="brand-mark" aria-hidden="true"></span>Dominik Knaup</a>
-  </div>
-  <div class="menubar-right">
-    <button type="button" class="menu-icon" id="theme-toggle" aria-label="Theme wechseln">
-      <svg class="ico-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-      <svg class="ico-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+<header class="top wrap">
+  <a href="/" class="back">← atrapfare.com</a>
+  <div class="top-right">
+    <button type="button" class="theme-btn" id="theme-toggle" aria-label="Dunkelmodus umschalten">
+      <svg class="ico-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="ico-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
   </div>
 </header>
 
-<div class="window no-dock" id="window">
-  <div class="titlebar">
-    <div class="lights">
-      <button type="button" class="light close" id="win-close" aria-label="Schließen"></button>
-      <button type="button" class="light min" id="win-min" aria-label="Minimieren"></button>
-      <button type="button" class="light zoom" id="win-zoom" aria-label="Vollbild"></button>
-    </div>
-    <div class="title">Impressum</div>
-    <div class="titlebar-right"><a href="/" class="back">‹ atrapfare.com</a></div>
-  </div>
-  <div class="window-body">
-    <main class="legal">
-      <h1>Impressum</h1>
-      <span class="stand">Stand: September 2026</span>
+<main class="wrap">
+  <div class="legal">
+    <h1>Impressum</h1>
+    <span class="stand">Stand: September 2026</span>
 
     <section>
       <h2>Angaben gemäß § 5 DDG</h2>
@@ -87,15 +75,16 @@
       <h2>Urheberrecht</h2>
       <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
     </section>
-  
-    </main>
-    <footer class="footer">
-      <p>© 2026 Dominik Knaup</p>
-      <nav aria-label="Rechtliches"><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></nav>
-    </footer>
   </div>
-</div>
+</main>
 
-<script src="/assets/js/legal.js" defer></script>
+<footer class="wrap">
+  <div class="foot">
+    <p>© <span id="year">2026</span> Dominik Knaup</p>
+    <nav aria-label="Rechtliches"><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></nav>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>

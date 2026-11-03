@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -18,8 +18,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
   <link rel="manifest" href="/favicon/manifest.json">
-  <meta name="theme-color" content="#cfe9da" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#06241a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#131312" media="(prefers-color-scheme: dark)">
 
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://atrapfare.com/">
@@ -67,240 +67,208 @@
 
 <a class="skip" href="#main" data-de="Zum Inhalt springen" data-en="Skip to content">Skip to content</a>
 
-<!-- ── Menu bar ─────────────────────────────────────────────── -->
-<header class="menubar">
-  <div class="menubar-left">
-    <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true"></span>Dominik Knaup</a>
-    <nav class="menu-items" aria-label="Sections">
-      <a href="#journey"  data-de="Werdegang" data-en="Journey">Journey</a>
-      <a href="#projects" data-de="Projekte"  data-en="Projects">Projects</a>
-      <a href="#stack"    data-de="Stack"     data-en="Stack">Stack</a>
-      <a href="#contact"  data-de="Kontakt"   data-en="Contact">Contact</a>
-    </nav>
-  </div>
-  <div class="menubar-right">
+<header class="top wrap">
+  <a href="/" class="name">Dominik Knaup</a>
+  <div class="top-right">
     <div class="lang" role="group" aria-label="Language">
       <button type="button" class="lang-btn" id="btn-de" lang="de" aria-pressed="false">DE</button>
+      <span class="lang-sep" aria-hidden="true">/</span>
       <button type="button" class="lang-btn active" id="btn-en" lang="en" aria-pressed="true">EN</button>
     </div>
-    <button type="button" class="menu-icon" id="theme-toggle" aria-label="Toggle theme">
-      <svg class="ico-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-      <svg class="ico-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <button type="button" class="theme-btn" id="theme-toggle" aria-label="Toggle dark mode" data-de-label="Dunkelmodus umschalten" data-en-label="Toggle dark mode">
+      <svg class="ico-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      <svg class="ico-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button>
-    <span class="menu-clock" id="clock" aria-hidden="true"></span>
   </div>
 </header>
 
-<!-- ── Window ───────────────────────────────────────────────── -->
-<div class="window" id="window" role="region" aria-label="Dominik Knaup">
-  <div class="titlebar">
-    <div class="lights">
-      <button type="button" class="light close" id="win-close" aria-label="Close window"></button>
-      <button type="button" class="light min" id="win-min" aria-label="Minimize window"></button>
-      <button type="button" class="light zoom" id="win-zoom" aria-label="Zoom window"></button>
+<main id="main" class="wrap">
+
+  <section class="intro" aria-labelledby="name">
+    <img class="photo" src="/assets/img/me.jpeg" alt="Portrait of Dominik Knaup" width="453" height="453" fetchpriority="high">
+    <div>
+      <h1 id="name">Dominik Knaup</h1>
+      <p class="role" data-de="Software Engineering · Stuttgart" data-en="Software Engineering · Stuttgart">Software Engineering · Stuttgart</p>
+      <p class="bio" data-l="en">I study <strong>Software Engineering</strong> at the University of Stuttgart and work as a student developer at the <strong>ISW</strong>. In my spare time I build web apps I use every day, and I run them on <a class="u" href="#projects">my own server</a>.</p>
+      <p class="bio" data-l="de">Ich studiere <strong>Software Engineering</strong> an der Universität Stuttgart und arbeite als Werkstudent in der Softwareentwicklung am <strong>ISW</strong>. Nebenbei baue ich Web-Apps, die ich selbst jeden Tag nutze, und betreibe sie auf <a class="u" href="#projects">meinem eigenen Server</a>.</p>
+      <p class="quick">
+        <a class="u" href="mailto:dominik@knaup.de">dominik@knaup.de</a>
+        <a class="u ext" href="https://github.com/atrapfare" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="u ext" href="https://linkedin.com/in/dominik-knaup-5b7368227" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="u" href="/cv/KNAUP_Dominik_CV.pdf" download="KNAUP_Dominik_CV.pdf" data-l="en">Resume (PDF)</a>
+        <a class="u" href="/cv/KNAUP_Dominik_Lebenslauf.pdf" download="KNAUP_Dominik_Lebenslauf.pdf" data-l="de">Lebenslauf (PDF)</a>
+      </p>
     </div>
-    <div class="title">atrapfare.com</div>
-    <div class="titlebar-right">
-      <div class="cv">
-        <button type="button" class="tb-btn" id="cv-toggle" aria-haspopup="menu" aria-expanded="false">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span data-de="Lebenslauf" data-en="Resume">Resume</span>
-        </button>
-        <div class="cv-menu" id="cv-menu" role="menu">
-          <a role="menuitem" href="/cv/KNAUP_Dominik_Lebenslauf.pdf" download="KNAUP_Dominik_Lebenslauf.pdf"><span class="k">DE</span>Lebenslauf (PDF)</a>
-          <a role="menuitem" href="/cv/KNAUP_Dominik_CV.pdf" download="KNAUP_Dominik_CV.pdf"><span class="k">EN</span>Resume (PDF)</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="progress" id="progress" aria-hidden="true"></div>
+  </section>
 
-  <div class="window-body" id="scroller">
-    <main id="main">
-
-      <section class="hero" id="top">
-        <figure class="hero-photo rise">
-          <img src="/assets/img/me.jpeg" alt="Portrait of Dominik Knaup" width="453" height="453" fetchpriority="high">
-        </figure>
-        <h1 class="rise">Dominik Knaup</h1>
-        <p class="lead rise" data-de="Software-Engineering-Student in Stuttgart, Werkstudent am ISW." data-en="Software Engineering student in Stuttgart, working student at ISW.">Software Engineering student in Stuttgart, working student at ISW.</p>
-        <div class="cta rise">
-          <a class="btn btn-primary" href="#projects" data-de="Projekte" data-en="Projects">Projects</a>
-          <a class="btn" href="mailto:dominik@knaup.de">E-Mail</a>
-        </div>
-      </section>
-
-      <section class="section" id="journey">
-        <h2 class="reveal" data-de="Werdegang" data-en="Journey">Journey</h2>
-        <ol class="timeline reveal" id="timeline">
-          <li class="tl-item">
-            <span class="tl-date">2014 – 2020</span>
-            <div class="tl-body"><h3 data-de="Gymnasium" data-en="High School">High School</h3><p>Evangelisches Mörike-Gymnasium, Stuttgart</p></div>
-          </li>
-          <li class="tl-item">
-            <span class="tl-date">2020 – 2023</span>
-            <div class="tl-body"><h3 data-de="Technisches Gymnasium, Profil IT" data-en="Technical High School, IT track">Technical High School, IT track</h3><p>it.schule Vaihingen, Stuttgart</p></div>
-          </li>
-          <li class="tl-item is-current">
-            <span class="tl-date" data-de="seit 2023" data-en="since 2023">since 2023</span>
-            <div class="tl-body"><h3>B.Sc. Software Engineering</h3><p data-de="Universität Stuttgart" data-en="University of Stuttgart">University of Stuttgart</p></div>
-          </li>
-          <li class="tl-item is-current">
-            <span class="tl-date" data-de="seit 2024" data-en="since 2024">since 2024</span>
-            <div class="tl-body"><h3 data-de="Werkstudent, Softwareentwicklung" data-en="Working Student, Software Development">Working Student, Software Development</h3><p data-de="ISW, Universität Stuttgart" data-en="ISW, University of Stuttgart">ISW, University of Stuttgart</p></div>
-          </li>
-          <li class="tl-item is-future">
-            <span class="tl-date">2027</span>
-            <div class="tl-body"><h3 data-de="Master (geplant)" data-en="Master's (planned)">Master's (planned)</h3></div>
-          </li>
-        </ol>
-      </section>
-
-      <section class="section" id="projects">
-        <h2 class="reveal" data-de="Projekte" data-en="Projects">Projects</h2>
-        <div class="grid projects">
-
-          <article class="card reveal">
-            <div class="app-icon c-blue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg></div>
-            <div class="card-body">
-              <div class="card-top"><h3>ILIAS Dashboard</h3><a href="https://mydevbro.app" target="_blank" rel="noopener noreferrer" class="chip-link">Live</a></div>
-              <p data-de="Kurse, Abgaben und Dokumente aus dem Uni-ILIAS in einem Dashboard. PWA mit Push-Erinnerungen und Kalender-Feed." data-en="Courses, assignments and documents from the university's ILIAS in one dashboard. PWA with push reminders and a calendar feed.">Courses, assignments and documents from the university's ILIAS in one dashboard. PWA with push reminders and a calendar feed.</p>
-              <ul class="tags"><li>Spring Boot</li><li>Vue 3</li><li>PostgreSQL</li></ul>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="app-icon c-cyan" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
-            <div class="card-body">
-              <div class="card-top"><h3>Files</h3><span class="chip-link muted" data-de="privat" data-en="private">private</span></div>
-              <p data-de="Eigener Dateispeicher statt Google Drive. Ordner, Uploads, ZIP-Entpacken, Papierkorb." data-en="My own file storage instead of Google Drive. Folders, uploads, ZIP extraction, trash.">My own file storage instead of Google Drive. Folders, uploads, ZIP extraction, trash.</p>
-              <ul class="tags"><li>Spring Boot</li><li>Vue 3</li><li>PostgreSQL</li></ul>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="app-icon c-purple" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg></div>
-            <div class="card-body">
-              <div class="card-top"><h3>Jarvis</h3><a href="https://github.com/Atrapfare/Jarvis" target="_blank" rel="noopener noreferrer" class="chip-link">GitHub</a></div>
-              <p data-de="Lokaler Chat-Assistent mit Ollama. Läuft auf der GPU in meinem PC." data-en="Local chat assistant with Ollama. Runs on the GPU in my PC.">Local chat assistant with Ollama. Runs on the GPU in my PC.</p>
-              <ul class="tags"><li>Spring Boot</li><li>Vue 3</li><li>Ollama</li></ul>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="app-icon c-orange" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></div>
-            <div class="card-body">
-              <div class="card-top"><h3 data-de="RISC-CPU" data-en="RISC CPU">RISC CPU</h3><a href="https://github.com/Atrapfare/vhdl-pipeline-cpu" target="_blank" rel="noopener noreferrer" class="chip-link">GitHub</a></div>
-              <p data-de="Prozessor mit Pipeline in VHDL, mit Hazard-Erkennung und Forwarding." data-en="Pipelined processor in VHDL, with hazard detection and forwarding.">Pipelined processor in VHDL, with hazard detection and forwarding.</p>
-              <ul class="tags"><li>VHDL</li></ul>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="app-icon c-pink" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3v7a2 2 0 0 0 4 0V3M9 3v18"/><path d="M17 3c-2 1-3 4-3 7 0 2 1 3 3 3v8"/></svg></div>
-            <div class="card-body">
-              <div class="card-top"><h3>Recipe Planner</h3><a href="https://github.com/Atrapfare/recipe-planner" target="_blank" rel="noopener noreferrer" class="chip-link">GitHub</a></div>
-              <p data-de="Wochenplan fürs Essen. Die Einkaufsliste wird daraus erzeugt." data-en="Weekly meal plan. The shopping list is generated from it.">Weekly meal plan. The shopping list is generated from it.</p>
-              <ul class="tags"><li>Spring Boot</li><li>Vue.js</li><li>MariaDB</li></ul>
-            </div>
-          </article>
-
-          <article class="card reveal">
-            <div class="app-icon c-green" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></div>
-            <div class="card-body">
-              <div class="card-top"><h3 data-de="Dieser Server" data-en="This server">This server</h3><span class="chip-link muted">VPS</span></div>
-              <p data-de="Traefik davor, jede Site ein eigener Docker-Stack. Diese Seite läuft dort." data-en="Traefik in front, each site its own Docker stack. This page runs there.">Traefik in front, each site its own Docker stack. This page runs there.</p>
-              <ul class="tags"><li>Traefik</li><li>Docker</li><li>Linux</li></ul>
-            </div>
-          </article>
-
-        </div>
-        <p class="more reveal"><a href="https://github.com/atrapfare" target="_blank" rel="noopener noreferrer" class="arrow-link" data-de="Mehr auf GitHub" data-en="More on GitHub">More on GitHub</a></p>
-      </section>
-
-      <section class="section" id="stack">
-        <h2 class="reveal" data-de="Stack" data-en="Stack">Stack</h2>
-        <dl class="stack reveal">
-          <div class="stack-row"><dt data-de="Sprachen" data-en="Languages">Languages</dt><dd><ul class="chips t-green"><li>Java</li><li>C++</li><li>Rust</li><li>Kotlin</li><li>TypeScript</li><li>SQL</li><li>Python</li></ul></dd></div>
-          <div class="stack-row"><dt>Backend</dt><dd><ul class="chips t-blue"><li>Spring Boot</li><li>Spring Security</li><li>JPA</li><li>PostgreSQL</li><li>MariaDB</li></ul></dd></div>
-          <div class="stack-row"><dt>Frontend</dt><dd><ul class="chips t-purple"><li>Vue 3</li><li>Vite</li><li>Pinia</li><li>Tailwind</li><li>React</li></ul></dd></div>
-          <div class="stack-row"><dt data-de="Infrastruktur" data-en="Infrastructure">Infrastructure</dt><dd><ul class="chips t-orange"><li>Docker</li><li>Traefik</li><li>Nginx</li><li>Linux</li><li>GitHub Actions</li></ul></dd></div>
-        </dl>
-      </section>
-
-      <section class="section" id="beyond">
-        <h2 class="reveal" data-de="Sonst so" data-en="Other than that">Other than that</h2>
-        <ul class="list reveal">
-          <li><a href="https://youtube.com/@atrapfare" target="_blank" rel="noopener noreferrer"><span class="emoji" aria-hidden="true">🏍️</span><span class="list-text"><strong data-de="Motorrad" data-en="Motorcycle">Motorcycle</strong><span data-de="Touren mit Freunden, Videos auf YouTube" data-en="Tours with friends, videos on YouTube">Tours with friends, videos on YouTube</span></span><span class="chev">›</span></a></li>
-          <li><div><span class="emoji" aria-hidden="true">🏋️</span><span class="list-text"><strong>Gym</strong><span data-de="Ein paar Mal die Woche" data-en="A few times a week">A few times a week</span></span></div></li>
-          <li><div><span class="emoji" aria-hidden="true">🐧</span><span class="list-text"><strong>Self-hosting</strong><span data-de="Linux, Docker, eigene Dienste statt Abos" data-en="Linux, Docker, own services instead of subscriptions">Linux, Docker, own services instead of subscriptions</span></span></div></li>
-        </ul>
-      </section>
-
-      <section class="section" id="contact">
-        <h2 class="reveal" data-de="Kontakt" data-en="Contact">Contact</h2>
-        <div class="contact-grid">
-          <div class="reveal">
-            <a class="email" href="mailto:dominik@knaup.de">dominik@knaup.de</a>
-            <div class="contact-meta">
-              <button type="button" class="btn btn-small" id="copy-email" data-de="Kopieren" data-en="Copy">Copy</button>
-              <a class="btn btn-small" href="tel:+491707741716">+49 170 7741716</a>
-            </div>
+  <section class="section" id="projects">
+    <h2 data-de="Projekte" data-en="Projects">Projects</h2>
+    <ul class="rows">
+      <li>
+        <a class="row" href="https://mydevbro.app" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>ILIAS Dashboard</h3>
+            <p data-de="Kurse, Abgaben und Dokumente aus dem Uni-ILIAS in einem Dashboard. PWA mit Push-Erinnerungen und Kalender-Feed." data-en="Courses, assignments and documents from the university's ILIAS in one dashboard. PWA with push reminders and a calendar feed.">Courses, assignments and documents from the university's ILIAS in one dashboard. PWA with push reminders and a calendar feed.</p>
+            <p class="meta">Spring Boot, Vue 3, PostgreSQL</p>
           </div>
-          <ul class="list socials reveal">
-            <li><a href="https://github.com/atrapfare" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span class="sub">@Atrapfare</span><span class="chev">›</span></a></li>
-            <li><a href="https://linkedin.com/in/dominik-knaup-5b7368227" target="_blank" rel="noopener noreferrer"><span>LinkedIn</span><span class="sub">dominik-knaup</span><span class="chev">›</span></a></li>
-            <li><a href="https://youtube.com/@atrapfare" target="_blank" rel="noopener noreferrer"><span>YouTube</span><span class="sub">@atrapfare</span><span class="chev">›</span></a></li>
-            <li><a href="https://instagram.com/atrapfare" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span class="sub">@atrapfare</span><span class="chev">›</span></a></li>
-            <li><a href="https://x.com/DominikKnaup" target="_blank" rel="noopener noreferrer"><span>X</span><span class="sub">@DominikKnaup</span><span class="chev">›</span></a></li>
-            <li><a href="https://leetcode.com/Atrapfare" target="_blank" rel="noopener noreferrer"><span>LeetCode</span><span class="sub">Atrapfare</span><span class="chev">›</span></a></li>
-          </ul>
+          <span class="side">mydevbro.app</span>
+        </a>
+      </li>
+      <li>
+        <div class="row">
+          <div>
+            <h3>Files</h3>
+            <p data-de="Eigener Dateispeicher statt Google Drive. Ordner, Uploads, ZIP-Entpacken, Papierkorb." data-en="My own file storage instead of Google Drive. Folders, uploads, ZIP extraction, trash.">My own file storage instead of Google Drive. Folders, uploads, ZIP extraction, trash.</p>
+            <p class="meta">Spring Boot, Vue 3, PostgreSQL</p>
+          </div>
+          <span class="side" data-de="privat" data-en="private">private</span>
         </div>
-      </section>
+      </li>
+      <li>
+        <a class="row" href="https://github.com/Atrapfare/Jarvis" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Jarvis</h3>
+            <p data-de="Lokaler Chat-Assistent mit Ollama. Läuft auf der GPU in meinem PC." data-en="Local chat assistant with Ollama. Runs on the GPU in my PC.">Local chat assistant with Ollama. Runs on the GPU in my PC.</p>
+            <p class="meta">Spring Boot, Vue 3, Ollama</p>
+          </div>
+          <span class="side">GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="https://github.com/Atrapfare/vhdl-pipeline-cpu" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3 data-de="RISC-CPU" data-en="RISC CPU">RISC CPU</h3>
+            <p data-de="Prozessor mit Pipeline in VHDL, mit Hazard-Erkennung und Forwarding." data-en="Pipelined processor in VHDL, with hazard detection and forwarding.">Pipelined processor in VHDL, with hazard detection and forwarding.</p>
+            <p class="meta">VHDL</p>
+          </div>
+          <span class="side">GitHub</span>
+        </a>
+      </li>
+      <li>
+        <a class="row" href="https://github.com/Atrapfare/recipe-planner" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h3>Recipe Planner</h3>
+            <p data-de="Wochenplan fürs Essen. Die Einkaufsliste wird daraus erzeugt." data-en="Weekly meal plan. The shopping list is generated from it.">Weekly meal plan. The shopping list is generated from it.</p>
+            <p class="meta">Spring Boot, Vue.js, MariaDB</p>
+          </div>
+          <span class="side">GitHub</span>
+        </a>
+      </li>
+      <li>
+        <div class="row">
+          <div>
+            <h3 data-de="Dieser Server" data-en="This server">This server</h3>
+            <p data-de="Traefik davor, jede Site ein eigener Docker-Stack. Diese Seite läuft dort." data-en="Traefik in front, each site its own Docker stack. This page runs there.">Traefik in front, each site its own Docker stack. This page runs there.</p>
+            <p class="meta">Traefik, Docker, Linux</p>
+          </div>
+          <span class="side">VPS</span>
+        </div>
+      </li>
+    </ul>
+  </section>
 
-    </main>
+  <section class="section" id="journey">
+    <h2 data-de="Werdegang" data-en="Journey">Journey</h2>
+    <ol class="rows journey">
+      <li>
+        <div class="row">
+          <span class="when">2027</span>
+          <div><h3 data-de="Master (geplant)" data-en="Master's (planned)">Master's (planned)</h3></div>
+        </div>
+      </li>
+      <li>
+        <div class="row now">
+          <span class="when" data-de="seit 2024" data-en="since 2024">since 2024</span>
+          <div><h3 data-de="Werkstudent, Softwareentwicklung" data-en="Working Student, Software Development">Working Student, Software Development</h3><p data-de="ISW, Universität Stuttgart" data-en="ISW, University of Stuttgart">ISW, University of Stuttgart</p></div>
+        </div>
+      </li>
+      <li>
+        <div class="row now">
+          <span class="when" data-de="seit 2023" data-en="since 2023">since 2023</span>
+          <div><h3>B.Sc. Software Engineering</h3><p data-de="Universität Stuttgart" data-en="University of Stuttgart">University of Stuttgart</p></div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="when">2020 – 2023</span>
+          <div><h3 data-de="Technisches Gymnasium, Profil IT" data-en="Technical High School, IT track">Technical High School, IT track</h3><p>it.schule Vaihingen, Stuttgart</p></div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <span class="when">2014 – 2020</span>
+          <div><h3 data-de="Gymnasium" data-en="High School">High School</h3><p>Evangelisches Mörike-Gymnasium, Stuttgart</p></div>
+        </div>
+      </li>
+    </ol>
+  </section>
 
-    <footer class="footer">
-      <p>© <span id="year">2026</span> Dominik Knaup</p>
-      <nav aria-label="Legal">
-        <a href="/impressum/" data-de="Impressum" data-en="Legal notice">Legal notice</a>
-        <a href="/datenschutz/" data-de="Datenschutz" data-en="Privacy">Privacy</a>
-      </nav>
-    </footer>
+  <section class="section" id="stack">
+    <h2>Stack</h2>
+    <dl class="stack">
+      <div><dt data-de="Sprachen" data-en="Languages">Languages</dt><dd>Java, C++, Rust, Kotlin, TypeScript, SQL, Python</dd></div>
+      <div><dt>Backend</dt><dd>Spring Boot, Spring Security, JPA, PostgreSQL, MariaDB</dd></div>
+      <div><dt>Frontend</dt><dd>Vue 3, Vite, Pinia, Tailwind, React</dd></div>
+      <div><dt data-de="Infrastruktur" data-en="Infrastructure">Infrastructure</dt><dd>Docker, Traefik, Nginx, Linux, GitHub Actions</dd></div>
+    </dl>
+  </section>
+
+  <section class="section" id="beyond">
+    <h2 data-de="Abseits vom Code" data-en="Away from code">Away from code</h2>
+    <ul class="rows">
+      <li>
+        <a class="row" href="https://youtube.com/@atrapfare" target="_blank" rel="noopener noreferrer">
+          <div><h3 data-de="Motorrad" data-en="Motorcycle">Motorcycle</h3><p data-de="Touren mit Freunden, die Videos landen auf YouTube." data-en="Tours with friends, the videos end up on YouTube.">Tours with friends, the videos end up on YouTube.</p></div>
+          <span class="side">YouTube</span>
+        </a>
+      </li>
+      <li>
+        <div class="row">
+          <div><h3>Gym</h3><p data-de="Ein paar Mal die Woche." data-en="A few times a week.">A few times a week.</p></div>
+        </div>
+      </li>
+      <li>
+        <div class="row">
+          <div><h3>Self-hosting</h3><p data-de="Linux, Docker, eigene Dienste statt Abos." data-en="Linux, Docker, own services instead of subscriptions.">Linux, Docker, own services instead of subscriptions.</p></div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section" id="contact">
+    <h2 data-de="Kontakt" data-en="Contact">Contact</h2>
+    <div>
+      <a class="mail" href="mailto:dominik@knaup.de">dominik@knaup.de</a>
+      <div class="contact-sub">
+        <a class="u" href="tel:+491707741716">+49 170 7741716</a>
+        <button type="button" class="copy" id="copy-email" data-de="E-Mail kopieren" data-en="Copy e-mail">Copy e-mail</button>
+      </div>
+      <ul class="links">
+        <li><a href="https://github.com/atrapfare" target="_blank" rel="noopener noreferrer"><span class="ext">GitHub</span><small>@Atrapfare</small></a></li>
+        <li><a href="https://linkedin.com/in/dominik-knaup-5b7368227" target="_blank" rel="noopener noreferrer"><span class="ext">LinkedIn</span><small>dominik-knaup</small></a></li>
+        <li><a href="https://youtube.com/@atrapfare" target="_blank" rel="noopener noreferrer"><span class="ext">YouTube</span><small>@atrapfare</small></a></li>
+        <li><a href="https://instagram.com/atrapfare" target="_blank" rel="noopener noreferrer"><span class="ext">Instagram</span><small>@atrapfare</small></a></li>
+        <li><a href="https://x.com/DominikKnaup" target="_blank" rel="noopener noreferrer"><span class="ext">X</span><small>@DominikKnaup</small></a></li>
+        <li><a href="https://leetcode.com/Atrapfare" target="_blank" rel="noopener noreferrer"><span class="ext">LeetCode</span><small>Atrapfare</small></a></li>
+      </ul>
+      <p class="cv"><span data-de="Lebenslauf als PDF:" data-en="Resume as PDF:">Resume as PDF:</span>
+        <a class="u" href="/cv/KNAUP_Dominik_CV.pdf" download="KNAUP_Dominik_CV.pdf">English</a>
+        <a class="u" href="/cv/KNAUP_Dominik_Lebenslauf.pdf" download="KNAUP_Dominik_Lebenslauf.pdf">Deutsch</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div class="foot">
+    <p>© <span id="year">2026</span> Dominik Knaup</p>
+    <nav aria-label="Legal">
+      <a href="/impressum/" data-de="Impressum" data-en="Legal notice">Legal notice</a>
+      <a href="/datenschutz/" data-de="Datenschutz" data-en="Privacy">Privacy</a>
+    </nav>
   </div>
-</div>
-
-<!-- shown when the window is closed -->
-<div class="closed-note" id="closed-note" hidden>
-  <p data-de="Fenster geschlossen." data-en="Window closed.">Window closed.</p>
-  <button type="button" class="btn btn-primary" id="win-reopen" data-de="Wieder öffnen" data-en="Reopen">Reopen</button>
-</div>
-
-<!-- ── Dock ─────────────────────────────────────────────────── -->
-<nav class="dock" aria-label="Dock">
-  <button type="button" class="dock-item running" id="dock-home" data-label="atrapfare.com">
-    <span class="dock-icon d-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg></span>
-  </button>
-  <a class="dock-item" href="https://github.com/atrapfare" target="_blank" rel="noopener noreferrer" data-label="GitHub">
-    <span class="dock-icon d-black"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></span>
-  </a>
-  <a class="dock-item" href="https://linkedin.com/in/dominik-knaup-5b7368227" target="_blank" rel="noopener noreferrer" data-label="LinkedIn">
-    <span class="dock-icon d-blue"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span>
-  </a>
-  <a class="dock-item" href="https://youtube.com/@atrapfare" target="_blank" rel="noopener noreferrer" data-label="YouTube">
-    <span class="dock-icon d-red"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
-  </a>
-  <a class="dock-item" href="https://instagram.com/atrapfare" target="_blank" rel="noopener noreferrer" data-label="Instagram">
-    <span class="dock-icon d-insta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></span>
-  </a>
-  <span class="dock-sep" aria-hidden="true"></span>
-  <a class="dock-item" href="mailto:dominik@knaup.de" data-label="E-Mail">
-    <span class="dock-icon d-sky"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
-  </a>
-  <a class="dock-item" href="/cv/KNAUP_Dominik_CV.pdf" download="KNAUP_Dominik_CV.pdf" data-label="CV">
-    <span class="dock-icon d-white"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg></span>
-  </a>
-</nav>
+</footer>
 
 <script src="/assets/js/main.js" defer></script>
 </body>
