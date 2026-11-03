@@ -4,9 +4,9 @@ Personal website of Dominik Knaup. Static HTML/CSS/JS, no build step, no framewo
 no external requests (fonts are self-hosted).
 
 - `www/` – the site. `index.html` is the single page, `impressum/` and `datenschutz/` the legal pages.
-- `www/assets/css/style.css` – all styling, light and dark theme via `data-theme`.
-- `www/assets/js/main.js` – theme toggle on every page; language toggle (DE/EN) and copy-e-mail on the index.
-- `www/assets/js/theme.js` – runs in `<head>` so theme and language are right on the first frame (language only on pages marked `data-i18n`).
+- `www/assets/css/style.css` – all styling (one dark theme, Source Sans 3 self-hosted).
+- `www/assets/js/main.js` – language toggle (DE/EN) on the index, footer year.
+- `www/assets/js/lang.js` – runs in `<head>` of the index so the stored/browser language is applied on the first frame.
 - `docker-compose.yml`, `nginx.conf` – the nginx container; routing/TLS is handled by Traefik on the host.
 
 ## Deploy
