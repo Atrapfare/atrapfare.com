@@ -7,7 +7,7 @@ no external requests (fonts are self-hosted).
 - `www/assets/css/style.css` – all styling (one dark theme, Source Sans 3 self-hosted).
 - `www/assets/js/main.js` – language toggle (DE/EN) on the index, footer year.
 - `www/assets/js/lang.js` – runs in `<head>` of the index so the stored language is applied on the first frame (default English).
-- `docker-compose.yml`, `nginx.conf` – the nginx container; routing/TLS is handled by Traefik on the host.
+- `docker-compose.yml`, `nginx/` – the nginx container (non-root, read-only; `nginx/nginx.conf` is the main config shared by all sites on the VPS, `nginx/site.conf` this site, `nginx/security-headers.conf` CSP & Co.); routing/TLS/compression are handled by Traefik on the host.
 
 ## Deploy
 
